@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title_block %} Profile_details {% endblock %}
+{% block body_block %}
+<div class="container mt-5 col-sm-7 border rounded">
+    <h3 class ="alert alert-light border rounded mt-4 mb-4 rounded " align="center" ><b>About Me</b></h3>
+
+        <table class="table table-hover border rounded">
+            <thead>
+              <tr>
+                <th scope="col">Context</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+          <tbody>
+          <tr>
+            <td>Username</td>
+              <td>{{ profile.username }}</td>
+          </tr>
+          <tr>
+            <td>Full Name</td>
+              <td>{{ profile.full_name }}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+              <td>{{ profile.address_1 }}</td>
+          </tr>
+          <tr>
+            <td>City</td>
+              <td>{{ profile.city }}</td>
+          </tr>
+          <tr>
+            <td>Zipcode</td>
+              <td>{{ profile.zipcode }}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+              <td>{{ profile.country }}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+              <td>{{ profile.phone }}</td>
+          </tr>
+          <tr>
+            <td>Joined Date</td>
+              <td>{{ profile.date_joined }}</td>
+          </tr>
+          </tbody>
+          </table>
+    <br>
+</form>
+</div>
+<br>
+<br>
+{% endblock %}

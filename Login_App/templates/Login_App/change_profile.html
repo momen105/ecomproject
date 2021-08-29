@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Profile {% endblock %}
+{% block body_block %}
+<div class="container mt-5 col-sm-7 border rounded">
+    <h3 class ="alert alert-light border rounded mt-4 mb-4 rounded " align="center" ><b>Complate Your Profile</b></h3>
+<form action="{% url 'Login_App:profile' %}"  method="POST">
+{{form|crispy}}
+{% csrf_token %}
+    <div class="text-center">
+         <button type="submit" class="btn btn-secondary btn-lg col-lg-4" href="{% url 'Home_App:home' %}"> Save</button>
+    </div>
+    <br>
+</form>
+</div>
+<br>
+<br>
+{% endblock %}
