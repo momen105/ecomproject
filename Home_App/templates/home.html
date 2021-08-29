@@ -13,11 +13,15 @@
           <h6 class="title text-uppercase "><a class="text-success" href="{% url 'Home_App:product_detail' pk=product.pk %}">{{product.name}}</a></h6>
           <div class="action-wrap">
             <div class="price-wrap h5">
-                <span class="price-new">{{product.preview_text}}</span><br><br>
+              <span class="Category">Category: {{product.category}}</span>
+              <hr>
+              <span class="text">{{product.preview_text}}</span><br><br>
               <span class="price-new">&#2547; {{product.price|floatformat:2}}</span>
               <span class="price-old"><strike>&#2547; {{product.old_price|floatformat:2}}</strike></span>
                 <br>
                 <br>
+              <br>
+
             </div>
           </div>
         </figcaption>

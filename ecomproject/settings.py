@@ -2,9 +2,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 import os
-#import django_heroku
-#import dj_database_url
-#from decouple import config
+import django_heroku
+import dj_database_url
+from decouple import config
 
 #TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ecomproject.urls'
@@ -138,4 +138,4 @@ LOGIN_URL = '/account/login/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
