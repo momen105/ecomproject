@@ -1,0 +1,2 @@
+# ecomproject
+This is a simple e-commerce project.Where users can do create a profile. All personal information of users and Information of all products purchased by users will be recorded on their profile which they can view whenever.From here users can buy the products of their choices.Users can add products to the Cart by their own choices.And after add products to the cart user can complete their order by checkout. Also users can delete the products anytime from the cart.
