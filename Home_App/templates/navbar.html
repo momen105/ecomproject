@@ -10,7 +10,7 @@
         <li class="nav-item">
           <a href="{% url 'Order_App:cart' %}" class="nav-link">
               <i class="fa fa-shopping-cart"></i> Cart
-              <span class="badge badge-light">{{ request.user | cart_total }}</span>
+              <span class="badge badge-secondary">{{ request.user | cart_total }}</span>
           </a>
         </li>
         <li class="nav-item dropdown">

@@ -1,17 +1,19 @@
-from django.shortcuts import render,HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.views import View
 
 # Forms and Models
-#from Login_App import models
+# from Login_App import models
 from Login_App.models import Profile
 from Login_App.forms import ProfileForm
 # Messages
 from django.contrib import messages
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
-class User_profile(View,LoginRequiredMixin):
+
+class User_profile(View, LoginRequiredMixin):
     def get(self, request):
         profile = Profile.objects.get(user=request.user)
         form = ProfileForm(instance=profile)
@@ -29,8 +31,8 @@ class User_profile(View,LoginRequiredMixin):
         return render(request, 'Login_App/change_profile.html', context={'form': form})
 
 
+@login_required
 def profile_details(request):
     profile_list = Profile.objects.get(user=request.user)
-    diction = {'profile':profile_list}
-    return render(request,'Login_App/profile.html',context=diction)
-
+    diction = {'profile': profile_list}
+    return render(request, 'Login_App/profile.html', context=diction)

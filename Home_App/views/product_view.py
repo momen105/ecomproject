@@ -29,4 +29,3 @@ class Home(View):
 class ProductDetail(LoginRequiredMixin, DetailView):
     model = Product
     template_name = 'shop_templates/product_detail.html'
-
