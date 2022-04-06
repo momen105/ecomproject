@@ -1,11 +1,9 @@
 from django.shortcuts import render
-
 # Import views
 from django.views.generic import ListView, DetailView
 from django.views import View
 # Models
 from Home_App.models.product_model import Product, Category
-
 # Mixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 
